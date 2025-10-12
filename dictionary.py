@@ -17,16 +17,16 @@ info = {
     }
 print(info)
 print(type(info))
-print(len(info))
-"""
+print(len(info))"""
+
 
 
 #  to get the values from the key
 """
 print(info['subjects'])
 print(info.get('is_adult'))
-print(info.get('name','rating'))
-"""
+print(info.get('name','rating'))"""
+
 
 #  to assign or add new key value pair
 """ info['playlist'] = ['python', 'java', 'c++', 'js' , 'html']
@@ -34,7 +34,7 @@ print(info)
 """
 
 #  you can also chage the value of the key 
-"""info["is_adult"] = "is_younger" # as you chage the value of is_adult to is_younger 
+"""info["is_adult"] = "is_younger" # as you chage the value of is_adult  which was true to is_younger 
 print(info)
 """
 
@@ -67,8 +67,9 @@ classroom = {
 print(classroom)
 print(classroom['marks']['maths'])
 print(classroom['marks']['social'])
-print(classroom['name'], classroom['section'])
-"""
+print(classroom['name'], classroom['section'])"""
+
+
 
 #mehods
 #1 to take out all the keys  mydict.heys()
@@ -83,6 +84,7 @@ classroom = {
     'section' : 'A',
     'attendence' : 90
     }
+"""
 print(classroom.keys()) # nesteded keys doesnot return 
 print(list(classroom.keys())) # we can ao convert it into the list 
 print(tuple(classroom.keys())) # we can also convert it into the tuple 
@@ -90,7 +92,7 @@ print(len(list(classroom.keys())))
 print(set(classroom.keys())) # we can also convert it into dict
 
 #2 method to take out all the values mydict.values()
-print(classroom.values()) # it also return the nested values 
+print(classroom.values()) # it also return the nested values""" 
 
 #3 methos to take out key value pair mydict.items()
 print(classroom.items())
