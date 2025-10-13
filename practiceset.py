@@ -229,14 +229,29 @@ print(f"{student_dict['name']} is {student_dict['age']} years old and lives in {
 # If the number of unique letters > 5 → print "Interesting word!"
 # else → print "Simple word!"
 
-word = input("Enter a word : ")
+"""word = input("Enter a word : ")
 word_set = set(word)
 print(word_set)
 if len(word_set) >= 5:
     print("Interesting word!")
 else:
-    print("Simple word")
+    print("Simple word")"""
 
 
+"""number = int(input("Enter a number: "))
+if number > 0:
+    print(f"{number} is a positive number")"""
 
+num = int(input("Enter the number: "))
+if num >= 0:
+    if num == 0:
+        print(f"{num} is zero")
+    else:
+        print(f"{num} is positive number")
+else:
+    print(f"{num} is negative number")
  
+
+marks = 40
+result = "pass"if marks >= 40 else "fail"
+print(result)
