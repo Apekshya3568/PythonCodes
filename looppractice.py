@@ -355,7 +355,7 @@ while i < len(collection):
 print(new_collect)"""
 
 #WAP to recognize the duplicate elements  using for loop       [2,2,3,3,3,3,4,5,6]        [2,3]
-collection = [2,2,3,3,3,3,3,4,5,6]
+"""collection = [2,2,3,3,3,3,3,4,5,6]
 collect = []
 dup_collect = []
 
@@ -365,8 +365,18 @@ for i in collection:
       if i not in dup_collect:
         dup_collect.append(i)
   
-print(dup_collect)
+print(dup_collect)"""
 
+
+# do while loop in python is the loop which is actually the while loop with the break statement
+
+while True:
+   number = int(input("Enter the number greater than 10: "))
+   if number > 10:
+      print(number)
+      break
+   else:
+      print("Enter valid number")
       
 
 

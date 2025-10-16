@@ -201,33 +201,208 @@ print(A.difference(B))"""
 # keys = ("name", "age", "city")
 # Convert them into a dictionary and print:
 # "Aakanchhya is 21 years old and lives in Kathmandu."
-student_info = ("Aakanchhya",21,"Kathmandu")
+"""student_info = ("Aakanchhya",21,"Kathmandu")
 keys = ("name","age","city")
 student_dict = dict(zip(keys,student_info))
 print(student_dict)
-print(f"{student_dict["name"]} is {student_dict["age"]} years old and lives in {student_dict["city"]}. ")
+print(f"{student_dict["name"]} is {student_dict["age"]} years old and lives in {student_dict["city"]}. ")"""
 
 # Multiplication Table:
 # Input a number and print its multiplication table up to 10.
-number = int(input("Enter the number for multiplication: "))
+"""number = int(input("Enter the number for multiplication: "))
 for i in range(1,11):
-    print(f'{number} * {i} = {number * i}')
+    print(f'{number} * {i} = {number * i}')"""
 
 
 # Prime Number Check:
 # Ask for a number and check whether it is prime or not.
-number = int(input("Enter number: "))
 
-for i in range(2,number):
-    if number % i != 0 :
-        print("prime")
+
+"""n = int(input("Enter a number to check wheather it is prime or composite: "))
+number = ''
+for i in range(1,n): # here loops runs only for i = 1 as i is between 1, 2 and in range(1,2) 2 will not include
+    if n % i == 0 and i != 1:
+       number = "composite"
+       break
     else:
-        print("composite")
-         
-
-
-
+        number = "prime"
+print(number)"""
+        
     
+    
+# Sum of Even Numbers in a List:
+# Input a list and find the sum of all even numbers.
+"""numbers = []
+count = int(input("Enter hoe many times you want to input the number: "))
+for i in range(count):
+    num = int(input("Enter the number in the list: "))
+    numbers.append(num)
+print(numbers)
+sum = 0
+even_numbers = []
+for j in numbers:
+    if j % 2 == 0:
+        even_numbers.append(j)
+        sum += j
+print(even_numbers)
+print(sum)"""
+
+
+# find the prime from 1 to n
+#composite no from 1 to n
+"""n = int(input("Enter n: "))
+i = 2 
+while i <= n:
+    flag = 0
+    for j in range(2,i):
+        if  i % j == 0:
+            flag = 1
+            break
+    if flag == 1:
+        print(i )
+    i += 1"""
+
+#prime no from 1 to n
+"""n = int(input("Enter a number: "))
+i = 2
+while i <= n:
+    flag = 0
+    for j in range(2,i):
+        if i % j == 0:
+            flag =1
+            break
+    if flag == 0:
+        #print(i)
+        # if we want output in same line seperated by space
+        print(i,end=' ')
+    i += 1"""
+
+# you have three integers - l , r and k . find how many numbers between l and r (both inclusive)( this means including that no as well) are divisible by k.
+#you do not need to print these no, you just have to find their count
+"""l = int(input("Enter a number: "))
+r = int(input("Enter a number: "))
+k = int(input("Enter a number: "))
+count_no = 0
+for i in range(l,r+1):
+    if i % k == 0:
+        count_no += 1
+print(count_no)"""
+
+# we can also 
+"""else:
+        print(count_no)
+"""
+
+#talking the input in one line and then splitting according to the value
+"""l,r,k = input().split()
+print(l)
+print(type(l))""" # this will provide an type str as it is a string
+# we know we need to put int in fron of input but
+# if we do this l,r,k = int(input().split()) this provides an error
+#so we need to do it seperatly
+"""l = int(l)
+r = int(r)
+k = int(k)
+print(l)
+print(type(l))
+print(r)
+print(type(r))
+print(k)
+print(type(k))"""
+
+
+#photos dimension questions
+"""n_photos = int(input("Enter the no of phtos: "))
+length_photos = int(input("Enter a length of photos: "))
+i = 1
+while i <= n_photos:
+    weight_photos = int(input('Enter the weight of photos: '))
+    height_photos = int(input("Enter the height of photo: "))
+    if weight_photos < length_photos or height_photos < length_photos:
+        print("UPLOAD ANOTHER")
+    elif weight_photos > length_photos and height_photos > length_photos:
+        if weight_photos == height_photos:
+            print("ACCEPTED")
+        else:
+            print("CROP IT")
+    i += 1"""
+
+#star dimension
+# for i in range(1,6):
+#     print(" " * (5-2), end = '' )
+#     print(i * "*")
+# for i in range(5,0,-1):
+#     print(i * "*")
+
+"""
+n = 5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print()"""
+    
+#pyramid stars 
+"""n = int(input("Enter the number: "))
+for i in range(1,n+1): # loop for the no rows
+    print(" " * (n-i) , end = '')  # spaces to center the stars
+    print("*" * (2 * i -1)) #print stars
+# 2n-1 = 1,3,5,7,9"""
+
+# write a program to find the factorial of given number 
+"""n = int(input("Enter the number to find factorail "))
+i = 1
+fact = 1
+while i <= n:
+    fact = fact * i
+    i += 1
+print(fact)"""
+
+
+# vowels to count
+"""my_string = "I am learning python"
+vowels_string = "aeiouAEIOU"
+count_vowels = 0
+for i in my_string:
+    for j in vowels_string:
+        if i == j:
+            count_vowels += 1
+print(count_vowels)"""
+
+#next method to count vowels
+"""my_strings = "I am very happy learning python"
+vowels = "aeiou"
+count = 0
+for i in my_strings:
+    if i.lower() in vowels:
+        count += 1
+print(count)"""
+
+
+
+
+# find the longest word in the string
+sentence = "I am happy learning python"
+longest_word = ''
+words = sentence.split()
+for i in words:
+    if len(i) > len(longest_word):
+        longest_word = i
+    
+print(longest_word)
+
+
+# fibonnacic number 
+# each number is equal to the sum of the preceding two numbers. eg: 0112358
+n = int(input("Enter the number: ")) # 5
+count = 0
+a,b = 0,1
+while count < n: #count = 0, 1,2 ,3 ,4
+    print(a) # 0 ,1 ,1 ,2,3
+    a,b = b , a+b # 1 1, 1 2,2 3,3 5,5 8
+    count += 1
+
+
+
 
 
 
