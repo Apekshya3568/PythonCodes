@@ -45,3 +45,33 @@ def natural(n):
     
 print(natural(5))
     
+
+
+def sum_natural(n):
+    if n == 0:
+        return 0
+    else:
+        return n + sum_natural(n-1)
+print(sum_natural(5))
+
+
+# write  a recrusive function to print all elements in a li
+my_list = [1,2, 3,4]
+def list_elements(my_list, i =0):
+    if i < len(my_list):
+        print(my_list[i])
+        list_elements(my_list, i+1)
+print(list_elements(my_list))
+
+
+
+# next method
+
+print_list = [1,3,5,7]
+
+def list_print(print_list, idx = 0):
+    if (idx == len(print_list)):
+        return 
+    print(print_list[idx])
+    list_print(print_list , idx + 1)
+print(list_print(print_list))

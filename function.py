@@ -110,10 +110,80 @@ pound_npr(pound)"""
 
 
 # wap to take a number and funciton to fins wheather it is even or odd
-n = int(input("Enter the number: "))
+"""n = int(input("Enter the number: "))
 def even_odd(n):
     if n % 2 == 0:
         print("EVEN")
     else:
         print("Odd")
-even_odd(n)
+even_odd(n)"""
+
+
+#Wap to make a function called submit-form, and take the parameters as fname, sname and
+#print(your form has been submmited {name}) and print(thanyou {name})
+"""def submit_form(fname, sname):
+    name = fname + " " + sname 
+    print(f"Your form has been submited {name}")
+    print(f"Thankyou {name}")
+submit_form("Apekshya","Lamichhane")
+"""
+#wap to write a funtion who has citizenshp print your form has been submitted and the print thankyou with the fullname
+"""def submit_form(fname,sname,has_citizenship):
+    full_name = fname +" " +sname
+    if has_citizenship:
+        print(f"Your form has been submitted {full_name}")
+        print(f"Thankyou {full_name}")
+submit_form("Apekshya" ,"Lamichhane",True)
+"""
+
+"""def submit_form(fname, sname , has_citizenship = False):
+    full_name = fname + " " +sname
+    if has_citizenship:
+        print(f"Your form has been submitted {full_name}")
+        print(f"Thankyou {full_name}")
+submit_form("Apekshya","Lamichhane")
+submit_form("Aaku","Lamichhane",True)
+"""
+
+#positional argument
+"""def submit_form(fname,sname):
+    print(f"You form has been sumbitted {fname} {sname}")
+submit_form('Lamichhane','Apekshya')""" #arguments not in posiiton so not expected output
+
+#keyword argument
+"""def submited_form(fname,sname):
+    print(f"Your form has been submitted {fname} {sname}")
+submited_form(sname = "Lamichhane" ,fname= "Aapu")""" # argument not in position but gives expected output
+#this is keyword argument
+
+
+
+#WAP to find the maxium even num from the given list
+# [1,2,3,4,12,12,14,15,19, 5]                      14
+         #even numbers        #max of those evens
+def even_numbers(my_list, maximum = 0):
+    for i in my_list:
+        if i % 2 == 0:
+           if maximum < i:
+               maximum = i
+    print(maximum)
+my_list = [1,2,3,4,12,12,14,15,19,5]
+even_numbers(my_list)
+
+#second methos
+"""def max_even():
+    numbers = [1,2,3,4,12,12,14,15,19,5]
+    even_list = []
+    for i in numbers:
+        if i % 2 == 0:
+            even_list.append(i)
+    print(max(even_list))
+max_even()"""
+
+
+# list comprehension
+print(max([item for item in my_list if item % 2 == 0]))
+print(min(i for i in my_list if i % 2 == 0))
+
+
+
