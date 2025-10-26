@@ -7,8 +7,8 @@ square_number = [(x * x if x % 2 == 0 else x) for x in numbers]
 even_number = [j for j in numbers if j % 2 == 0]
 print(numbers)
 print(square_number)
-print(even_number)        
-"""
+print(even_number)"""        
+
 
 """count  = int(input("Enter how many times yiu want to check for the numbers: "))
 for i in range(count):
@@ -19,8 +19,8 @@ for i in range(count):
         else:
             print("It is a positive number")
     else:
-        print("It is a negative number")
-"""
+        print("It is a negative number")"""
+
 
 #Even or Odd from 1 to N:
 #Take an integer n and print all even numbers from 1 to n using a loop.
@@ -222,13 +222,22 @@ for i in range(1,11):
 number = ''
 for i in range(1,n): # here loops runs only for i = 1 as i is between 1, 2 and in range(1,2) 2 will not include
     if n % i == 0 and i != 1:
+       print(f"{i} = {number}")
        number = "composite"
        break
     else:
         number = "prime"
-print(number)"""
-        
+print(number)
+        """
+
     
+"""n = int(input("Enter a number: "))
+for i in range(2,n):
+    if n % i == 0:
+        print(f"Composite number{n}")
+        break
+    else:
+        print(f"Prime {n}")"""
     
 # Sum of Even Numbers in a List:
 # Input a list and find the sum of all even numbers.
@@ -275,7 +284,9 @@ while i <= n:
         #print(i)
         # if we want output in same line seperated by space
         print(i,end=' ')
+    print("hello")
     i += 1"""
+
 
 # you have three integers - l , r and k . find how many numbers between l and r (both inclusive)( this means including that no as well) are divisible by k.
 #you do not need to print these no, you just have to find their count
@@ -328,25 +339,25 @@ while i <= n_photos:
     i += 1"""
 
 #star dimension
-# for i in range(1,6):
-#     print(" " * (5-2), end = '' )
-#     print(i * "*")
+"""for i in range(1,6):
+    print(" " * (5-2), end = '' )
+    print(i * "*")"""
 # for i in range(5,0,-1):
 #     print(i * "*")
 
-"""
-n = 5
+
+"""n = 5
 for i in range(1,n+1):
     for j in range(1,i+1):
         print("*",end=" ")
     print()"""
     
 #pyramid stars 
-"""n = int(input("Enter the number: "))
+''''n = int(input("Enter the number: "))
 for i in range(1,n+1): # loop for the no rows
     print(" " * (n-i) , end = '')  # spaces to center the stars
-    print("*" * (2 * i -1)) #print stars
-# 2n-1 = 1,3,5,7,9"""
+    print("*" * (2 * i -1))''' #print stars
+# 2n-1 = 1,3,5,7,9
 
 # write a program to find the factorial of given number 
 """n = int(input("Enter the number to find factorail "))
@@ -359,14 +370,14 @@ print(fact)"""
 
 
 # vowels to count
-"""my_string = "I am learning python"
+my_string = "I am learning python"
 vowels_string = "aeiouAEIOU"
 count_vowels = 0
 for i in my_string:
     for j in vowels_string:
         if i == j:
             count_vowels += 1
-print(count_vowels)"""
+print(count_vowels)
 
 #next method to count vowels
 """my_strings = "I am very happy learning python"

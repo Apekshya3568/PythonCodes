@@ -255,3 +255,6 @@ else:
 marks = 40
 result = "pass"if marks >= 40 else "fail"
 print(result)
+
+
+

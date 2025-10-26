@@ -18,7 +18,7 @@ print(fruits)
 print(fruits[1:])
 print(fruits[-2:-1])"""
 
-# methids
+# methods
 # adding and removing elements
 """
 print(fruits)
@@ -41,6 +41,11 @@ fruits.sort(reverse = True) # this will sort in descending order
 print(fruits)
 fruits.reverse() # this will reverse the list
 print(fruits)"""
+collection = [1,2,3,4,5,6,2,3,2]
+print(collection.count(2))
+
+
+
 
 
 # palindrome practice
@@ -62,12 +67,18 @@ else:
 
 print(collection_list)"""
 
-collection_list = [1,2,1]
+
+# the correct method
+"""collection_list = [1,2,1]
 collection_copy = collection_list.copy()
 collection_copy.reverse()
 if collection_list == collection_copy:
     print("Palindrome")
 else:
-    print("Not a Palindromer")
+    print("Not a Palindromer")"""
+
+
+list = [(1,2,3,4,5) ,{2,3,4,5,5,6}, {'name' : "Apekshya" , 'location' : "Hadigaun"},[1,2,3,4,5],24,25,26, "Karan", 4.5]
+print(list) # in list we can store tuple , set, dictionary , list itself , integer , string, float
 
 

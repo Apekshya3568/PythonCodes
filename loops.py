@@ -112,6 +112,15 @@ for i in range(0,len(tuple_elements)):
     if(search_elements == tuple_elements[i]):
         print("search eleemt found at index", i)
 """
+# other method
+"""tuple_elements = (1,4,9,16,25,36,49,64,81,100)
+search_elements = int(input("Enter the element you want to search: "))
+for i in tuple_elements:
+    if i == search_elements:
+        print("Found")"""
+
+
+
 # break keyword
 """i = 0
 while i <= 5:
@@ -120,8 +129,8 @@ while i <= 5:
         break
     i += 1
     print("This will not be print")
-print("This break key word terminate the loop")
-"""
+print("This break key word terminate the loop")"""
+
 #continue
 """i = 0
 while i <= 5:
@@ -152,9 +161,9 @@ while i <= 10:
 
 #for loop 
 #LIST
-vegetables = ["spanish","brocooli","cabage","bitter guard","crowliflower"]
+"""vegetables = ["spanish","brocooli","cabage","bitter guard","crowliflower"]
 for veggi in vegetables:
-    print(veggi)
+    print(veggi)"""
  
 # TUPLE
 """meat = ("chicken","prawn","red meat","pork","fish meat")
@@ -185,8 +194,8 @@ for char in name:
 
     print(char)
 else:
-    print("end")
-"""
+    print("end")"""
+
 
 # search for the element in the tuple
 """elements = (1,4,16,36,49,64)
@@ -278,6 +287,8 @@ fruits = ["apple","mango","banana","pineapple"]
 for i in foods:
     for j in fruits:
         print(i,j)
+
+        
 
 
 
