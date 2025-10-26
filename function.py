@@ -181,9 +181,9 @@ even_numbers(my_list)
 max_even()"""
 
 
-# list comprehension
-print(max([item for item in my_list if item % 2 == 0]))
-print(min(i for i in my_list if i % 2 == 0))
+# list comprehension 
+print(max([item for item in my_list if item % 2 == 0])) # this gives 14 as output
+print(min(i for i in my_list if i % 2 == 0)) # this also works and it gives 2 as output
 
 
 
