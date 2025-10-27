@@ -32,41 +32,43 @@ def fact(n):
     if n == 0 or n == 1:
         return 1
     else:
+        print(n)
+        print(n* fact(n-1))
         return n * fact(n-1) # recrusion relation fact(n) = n * fact(n-1) fact(n-1) = n-1 * fact(n-2)
 print(fact(5))
 
 #write a recursive function to calculate the sum of first n natural numbers.
-
+"""
 def natural(n):
    
     if n == 0:
         return 0
     return natural(n-1) + n
     
-print(natural(5))
+print(natural(5))"""
     
 
 
-def sum_natural(n):
+"""def sum_natural(n):
     if n == 0:
         return 0
     else:
         return n + sum_natural(n-1)
-print(sum_natural(5))
+print(sum_natural(5))"""
 
 
 # write  a recrusive function to print all elements in a li
-my_list = [1,2, 3,4]
+"""my_list = [1,2, 3,4]
 def list_elements(my_list, i =0):
     if i < len(my_list):
         print(my_list[i])
         list_elements(my_list, i+1)
-print(list_elements(my_list))
+print(list_elements(my_list))"""
 
 
 
 # next method
-
+"""
 print_list = [1,3,5,7]
 
 def list_print(print_list, idx = 0):
@@ -74,4 +76,4 @@ def list_print(print_list, idx = 0):
         return 
     print(print_list[idx])
     list_print(print_list , idx + 1)
-print(list_print(print_list))
+print(list_print(print_list))"""

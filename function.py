@@ -18,11 +18,11 @@ substraction = sub_num(101,100)
 print(substraction)"""
 
 # print hello Apekshya when a fucniton is call
-def print_hello(): # this funciton has no parameter 
+"""def print_hello(): # this funciton has no parameter 
     print("Hello Apekshya") # this funciton has no return 
 print_hello()
-result = print_hello()
-print(result) # the output of this function is none as it doesnot return anything 
+result = print_hello()"""
+# print(result) # the output of this function is none as it doesnot return anything 
 
 
 # average number
@@ -30,7 +30,7 @@ print(result) # the output of this function is none as it doesnot return anythin
     average = (a+ b ) / 2
     print(average)
 avg_num(3,3)
-print(avg_num(4,9))"""
+print(avg_num(4,9))""" # in this as print is there and inside it there is avg_num(4,9) so this call id function call so it runs the inside funciton code and give result 6.5 but there is print so it agian gives none
 
 """def cal_marks(marks1,marks2,marks3):
     sum = marks1+marks2+marks3
@@ -38,8 +38,22 @@ print(avg_num(4,9))"""
     print(average)
     return average
 
-cal_marks(92,89,97)"""
+cal_marks(92,89,97)
+total_marks = cal_marks(83,84,85) # this will definitly gives an result as therweis callinf of the function
+print(total_marks) # but this will also give an output as numbers as it doesnit give none as there is return average
+print(cal_marks)""" # this will also give an output not none it give numvers as there is the return type
 
+"""def sum(a,b):
+    return a+b
+sum(4,4) # this will not give any output as inside the function there is no print it even doesnot give none
+print(sum(10,10))""" # so to get an output we need to print it 
+
+def sum(a,b):
+    print(a*b)
+    return a *b
+sum(3,10)
+sum_no = sum(4,10)
+print(sum_no)
 # default argument
 """def calc_prod(a = 2, b =2): # default id we didnot pass any argument when we call the function then this works 
     print(a * b)
@@ -184,6 +198,93 @@ max_even()"""
 # list comprehension 
 print(max([item for item in my_list if item % 2 == 0])) # this gives 14 as output
 print(min(i for i in my_list if i % 2 == 0)) # this also works and it gives 2 as output
+
+
+
+# my_list = [2,2,3,3,3,3,4,5,6] this is the question and this is the output #[4,5,6]
+"""my_list = [2,2,3,3,3,4,5,6]
+def new_elements(my_list):
+    elements = []
+    for i in my_list:
+        if my_list.count(i) == 1:
+            elements.append(i)
+    print(elements)
+new_elements(my_list)"""
+
+
+#next method
+"""my_list = [2,2,3,3,3,4,5,6]
+def remove_duplicates(my_list):
+    print(list(set(my_list)))
+remove_duplicates(my_list)"""
+
+
+#practice question 
+"""state = "start"
+while True:
+    command = input("Enter a command start , stop , help: ").lower()
+    if command == state:
+        if command == "start":
+            print("Car is already in start state")
+        elif command == "stop":
+            print("Car is already in stop state")
+        elif command == "help":
+            print("start to start /n stop to stop")
+    else:
+        if command == "start":
+            print('Car started')
+        elif command == "stop":
+            print("Car stopped")
+        elif command == "help":
+            print("start to start /n stop to stop")
+        else:
+            print("Sorry , you entered the wrong command")
+    state == command
+    is_continue = input("Y for yes and N for no: ").upper()
+    if is_continue == "N":
+        break
+print('Thankyou for playing')"""
+
+
+#Guessing game
+# take the secret_number, guess_count, guess_limit varible..
+# secret_number would have one integer value from 0-9
+# you give 3 chance to guess the number
+# if the guess is correct print you won else try again
+# and print sorry you failed after 3 tries
+"""secret_number = int(input('Enter the secret no: '))
+guess_count = 0
+guess_limit = 3
+
+while guess_count < guess_limit:
+    guess_count += 1
+    # print(guess_count)
+    guess_number = int(input("Enter the no to guess: "))
+    if guess_number == secret_number:
+        print("You won")
+        break
+    
+    else:
+        if guess_count == guess_limit:
+            print("You failed")
+        else:
+            print("Try again")
+    
+else:
+    print("Sorry you failed after 3 tries ")"""
+
+
+# print the elements of list in descending order 
+my_list = [1,2,3,4,5,6,7,8,9]
+desc_list = []
+maximum = 0
+j = 0
+while j <= len(my_list):
+    for i in my_list:
+        if maximum <= i:
+            maximum = i
+    j += 1
+
 
 
 
