@@ -59,21 +59,46 @@ print(numbers)"""
 print(number)"""
 
 
-collection = {x % 3 for x in range(10)}
-print(collection)
+"""collection = {x % 3 for x in range(10)} # this is in set as the output 
+print(collection)"""
 
-list_collection = [x % 3 for x in range(10)]
-print(list_collection)
+"""list_collection = [x % 3 for x in range(10)] # this is in the list
+print(list_collection)"""
 
-dict_collection = {x : x*x for x in range(10)}
-print(dict_collection)
+"""dict_collection = {x : x*x for x in range(10)} # this is the dict comprehension
+print(dict_collection)"""
 
-num = [1,2,3]
-print({x : x * x for x in num})
+"""num = [1,2,3]
+print({x : x * x for x in num})"""
 
 
-num = [1,2,3]
+"""num = [1,2,3]
 print([(i *2 if i % 2 == 0 else i *3) for i in num])
+"""
+
+"""my_list = [2,3,4,5,6,9]
+print(max(num for num in my_list))"""
 
 
+#dictionary comprehension
+my_dict = {'a' : 1, 'b' : 2, 'c' : 3}
+new_dict = {}
+for item in my_dict.items():
+    key , value = item
+    if value % 2 == 0:
+        new_dict.update({key:value ** 2})
+print(new_dict)
 
+my_dict = {'a' : 1, 'b': 2,'c':3,'d':4}
+print({key :value **2 if value % 2 == 0 else value for key , value in my_dict.items()})
+print({key :value **2 for key, value in my_dict.items() if value % 2 == 0})
+
+
+my_dict = {'a' : 2, 'b' : 3, 'c' : 5,'d':6}
+new_dict = {}
+for key , value in my_dict.items():
+    if value % 2== 0 :
+        new_dict.update({key:value**2})
+    else:
+        new_dict.update({key:value})
+print(new_dict)

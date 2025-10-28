@@ -275,7 +275,7 @@ else:
 
 
 # print the elements of list in descending order 
-my_list = [1,2,3,4,5,6,7,8,9]
+"""my_list = [1,2,3,4,5,6,7,8,9]
 desc_list = []
 maximum = 0
 j = 0
@@ -283,8 +283,64 @@ while j <= len(my_list):
     for i in my_list:
         if maximum <= i:
             maximum = i
-    j += 1
+    j += 1"""
 
 
 
+# map function which syntax is map(function, iterable) where iteranle is (list, tuple ,set)
+#square of number
+"""number = [1,2,3,4,5]
+def square(n):
+    return n ** 2
+print(list(map(square,number)))"""
+
+
+#convert celsius to fahereheit
+"""celsius = [0, 10, 20, 30, -10]
+def celsi_to_fehren(n):
+    return (9/5) * n + 32
+print(list(map(celsi_to_fehren,celsius)))"""
+
+#cube of the number
+"""def cube(n):
+    return n ** 3
+print(list(map(cube,[1,2,3,4,5])))"""
+
+
+# convert lsit of string to integers
+"""number = ['1','2','3','4','5']
+def str_to_integer(n):
+    return int(n)
+print(list(map(str_to_integer,number)))"""
+
+"""number = ['1','2','3','4','5']
+converted = map(int, number)
+print(list(converted))"""
+
+#Apply string functions
+"""names = ['aakanchhaya' ,'apekshya','uma','bhupesh']
+upper_names = map(str.upper,names)
+print(list(upper_names))
+
+number = (1,2,3,4,5,6,7,7)
+def even_odd(n):
+    return "Even" if n % 2 == 0 else "odd"
+result = map(even_odd, number)
+
+print(tuple(result)) # this uses the map completely so it gives below empty 
+print(list(result))""" # it pass an empty list [] as A map object is like a one-time-use machine — once you’ve taken out all the values, it’s empty.
+
+
+# next case the correct code
+number = (1, 2, 3, 4, 5, 6, 7, 7)
+
+def even_odd(n):
+    return "Even" if n % 2 == 0 else "Odd"
+
+result = list(map(even_odd, number))
+print(tuple(result))
+print(list(result))
+
+paired = dict(zip(number, result))
+print(paired)
 
