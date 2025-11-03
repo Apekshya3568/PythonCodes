@@ -175,14 +175,14 @@ submited_form(sname = "Lamichhane" ,fname= "Aapu")""" # argument not in position
 #WAP to find the maxium even num from the given list
 # [1,2,3,4,12,12,14,15,19, 5]                      14
          #even numbers        #max of those evens
-def even_numbers(my_list, maximum = 0):
+"""def even_numbers(my_list, maximum = 0):
     for i in my_list:
         if i % 2 == 0:
            if maximum < i:
                maximum = i
     print(maximum)
 my_list = [1,2,3,4,12,12,14,15,19,5]
-even_numbers(my_list)
+even_numbers(my_list)"""
 
 #second methos
 """def max_even():
@@ -196,8 +196,8 @@ max_even()"""
 
 
 # list comprehension 
-print(max([item for item in my_list if item % 2 == 0])) # this gives 14 as output
-print(min(i for i in my_list if i % 2 == 0)) # this also works and it gives 2 as output
+"""print(max([item for item in my_list if item % 2 == 0])) # this gives 14 as output
+print(min(i for i in my_list if i % 2 == 0))""" # this also works and it gives 2 as output
 
 
 
@@ -295,6 +295,13 @@ def square(n):
 print(list(map(square,number)))"""
 
 
+# as these give an error so we use map function 
+"""number = [1,2,3,4,5,6,7]
+def square_no(n):
+    return n ** 2
+print(list(square_no(number)))"""
+
+
 #convert celsius to fahereheit
 """celsius = [0, 10, 20, 30, -10]
 def celsi_to_fehren(n):
@@ -320,27 +327,493 @@ print(list(converted))"""
 #Apply string functions
 """names = ['aakanchhaya' ,'apekshya','uma','bhupesh']
 upper_names = map(str.upper,names)
-print(list(upper_names))
+print(list(upper_names))"""
 
-number = (1,2,3,4,5,6,7,7)
+
+#imp
+"""number = (1,2,3,4,5,6,7,7)
 def even_odd(n):
     return "Even" if n % 2 == 0 else "odd"
 result = map(even_odd, number)
 
 print(tuple(result)) # this uses the map completely so it gives below empty 
+print(tuple(result))
 print(list(result))""" # it pass an empty list [] as A map object is like a one-time-use machine — once you’ve taken out all the values, it’s empty.
+#output
+"""('odd','Even",......') #this is the output of print(tuple(result))
+() # this is the output if print(tuple(result))
+[]""" # this is the output of print(list(result))
+
+
 
 
 # next case the correct code
-number = (1, 2, 3, 4, 5, 6, 7, 7)
+"""number = (1, 2, 3, 4, 5, 6, 7, 7)
 
 def even_odd(n):
     return "Even" if n % 2 == 0 else "Odd"
 
 result = list(map(even_odd, number))
+print(result)
 print(tuple(result))
+print(tuple(result))
+print(result)
+print(result)
 print(list(result))
 
 paired = dict(zip(number, result))
-print(paired)
+print(paired)"""
 
+"""
+def addition(a,b):
+    return a + b
+a = [1,2,3,4,5]
+b = [2,3,4,5,6]
+print(list(map(addition, a,b)))"""
+
+
+
+# this gave an wrror as list object is not collable 
+"""a = [1,2,3,4]
+b = [2,3,4,5]
+
+sum = list(map(a + b , a,b))
+print(sum)
+print(tuple(sum))
+# and the error is list object os not collaable that means you are trying to call list as if it were the finctopn
+"""
+
+
+
+#lambda
+add = lambda a , b : a + b
+print(add(2,3))
+
+#lambda using inside the map()
+#lambda can also be use indide the map() , filter() , sorted() , reduce()
+"""nums = [1,2,3,4,5]
+print(list(map(lambda x : x** 2, nums)))"""
+
+
+#Multiple iterables with lambda 
+"""a = [1,2,3,4,5]
+b = [2,3,4,5,6]
+print(list(map(lambda x , y : x + y , a,b)))"""
+
+#Conditional inside lambda
+"""nums = [1,2,3,4,5,6,]
+print(list(map(lambda x : "Even" if x % 2 == 0 else "odd", nums)))"""
+
+# Replacing a small named function inline
+"""def capitalize(n):
+    return n.capitalize()
+print(list(map(capitalize , ['a','b'])))
+print(tuple(map(capitalize, ["aapu","aaku'"])))
+# print(dict(zip(map(capitalize, ["aa" ,"pp"])))) this gave an error
+word = ["aaku","aapu"]
+print(dict(zip(word,map(capitalize, word))))"""
+
+
+# now this code suing lambda
+"""print(list(map(lambda x : x.capitalize(), ["a","b"])))
+print(tuple(map(lambda x : x.upper() , ["aapu","aaku"])))
+word = ["aapu","aaku"]
+print(dict(zip(word ,map(lambda x :x.upper(),word))))"""
+
+
+#list comprehension
+"""nums = [1,2,3,4,5]
+print(list(x ** 2 for x in nums if x % 2 == 0))"""
+
+
+"""print(list(map(lambda x : x ** 2 if x % 2== 0 else x,nums))) """# in lambda if we have if then we need to have else as well it is necesaary not like above in list comprehension
+
+
+
+"""nums = [-2, 1, 0, 3]
+print(list(map(lambda x : abs(x) if x < 0 else x, nums)))"""
+
+
+
+# filter 
+
+# this is with the map
+"""def is_even(n):
+    return n % 2 ==0 
+n = [1,2,3,4,5,6]
+result = list(map(is_even, n))
+print(result)"""
+# the output is [False, True , ...]
+
+#with filter
+"""def is_odd(num):
+    return num % 2 == 0
+num = [1,2,3,4,5,6]
+odd_no = list(filter(is_odd , num))
+print(odd_no)"""
+#the outut is [2,4,6]
+
+
+# using lambda
+"""num = [1,2,3,4,5]
+print(list(filter(lambda x : x % 2 == 0 , num)))"""
+
+
+"""names = ["Aakanchhya" ,"","Apekshya","","Karan"]
+print(list(filter(lambda x :x != "", names)))
+"""
+
+
+#zipp combined multiple iterables
+"""names = ["Aaku" ,"Aapu","Ram","Sita","Aaku"]
+marks = [92,88,78,90,92]
+print(list(zip(names,marks)))
+print(dict(zip(names,marks)))
+print(tuple(zip(names,marks)))
+print(set(zip(names,marks)))"""
+
+
+"""my_dict = {
+    'names' :"Aapu",
+    "location" :"Hadigaun"
+    
+}
+degree = ["see","+2","Bachelor","Mater"]
+print(list(zip(my_dict.items(),degree)))"""
+
+
+"""a = ("Hello" ,"Welcome To" ,"Have a ")
+b =("Apekshya","Nepal","Nice day")
+print(list(zip(a,b)))"""
+
+
+"""name = ("Aakanchhya","Apekshya","Ram","Sita")
+score = (98,96,88,98)
+for name , score in zip(name,score):
+    print(f"{name} scored {score}")"""
+
+
+# reduce fucntion
+# it is used to reduce a sequence (like a list into a single value by repeadly applying a functioo)
+#sum of the lsit 
+"""from functools import reduce
+print(reduce(lambda x , y : x + y , [1,2,3,4,5]))"""
+# how it workd as the output is 15 
+# first the  x + y then x = 1 and y =2 then sum = 3 so this 3 = x now and y = 3 so sum = 6 thrn x = 6 and y = 4 then sum = 10 and then x = 10 and y = 5 so toal is 15 is the output
+#x=1, y=2 → result = 3
+# 2️ Now x=3, y=3 → result = 6
+# 3️Now x=6, y=4 → result = 10
+# 4 now x = 10 y = 5 result = 15
+
+# producnt of the list
+"""print(reduce(lambda x ,y : x* y , [1,2,3,4,5]))"""
+
+#find the maximum value
+"""print(reduce(lambda a,b : a if a > b else b, [12,21,34,53,77,88]))"""
+
+#using initializer
+"""print(reduce(lambda x, y : x+y ,[1,2,3,4,5],10))"""
+# here 10 is initializer as reduce syntax = (function , iterable ,initializer)
+#here 10 odes as 10 + 1+ 2+3+4+5
+# so the output is 25 
+
+#concatening the string
+"""word = ["I","am","very","happy","person."]
+print(reduce(lambda x , y : x + " " + y , word))"""
+
+
+#sum of square of even no 
+"""number = [1,2,3,4,5,6]
+even_no =filter(lambda x : x % 2 ==0,number)
+square = map(lambda x : x **2 ,even_no)
+sum = reduce(lambda x , y : x +y , square)
+print(sum)
+"""
+
+#Calculate the total bills with discount
+"""prices = [244,255,400,300]
+discount = 0.1
+discount_price = map(lambda x : x - x * discount , prices)
+total_price = reduce(lambda x , y : x + y , discount_price)
+print(total_price)"""
+
+ #map huda for loop chahinna
+ #lambda huda function chahinna
+
+#while loop inside the function
+"""def multiply(n):
+    new_list = []
+    i = 0
+    while i < len(n):
+        if n[i] % 2 == 0:
+            new_list.append(n[i] * 2)
+        else:
+            new_list.append(n[i] * 3)
+    
+        i += 1
+    print(new_list)
+multiply([1,2,3,4,5,6])"""
+
+
+#for loop inside the funciton
+"""def multiply(n):
+    new_list=[]
+    for i in n:
+        if i % 2 == 0:
+            new_list.append(i * 2)
+        else:
+            new_list.append(i * 3)
+    print(new_list)
+multiply([1,2,3,4,5,6])"""
+   
+#listcomprehension
+"""number = [1,2,3,4,5,6]
+print(list(x * 2 if x % 2 == 0 else x * 3 for x in number))"""
+
+#map
+"""def multiply(n):
+    if n % 2 == 0:
+        return n * 2
+    else:
+        return n * 3
+print(list(map(multiply,[1,2,3,4,5,6])))"""
+
+#lambda
+"""number = [1,2,3,4,5,6]
+print(list(map(lambda x : x * 2 if x % 2 == 0 else x* 3, number)))"""
+
+
+#filter
+#WAP using for loop that filters the even element on new list
+# [1,2,3,4]           [2,4]
+"""def even_no(n):
+    new_list= []
+    for i in n:
+        if i % 2== 0 :
+            new_list.append(i)
+    print(new_list)
+even_no([1,2,3,4])"""
+
+#for filter as well we can use function 
+"""def even_num(n):
+    if n % 2== 0:
+        return n
+print(list(filter(even_num,[1,2,3,4])))"""
+
+#filter with lambda
+"""print(list(filter(lambda x : x% 2 == 0 , [1,2,3,4])))"""
+
+#list comprehension
+"""my_list= [1,2,3,4]
+print([i for i in my_list if i % 2== 0])"""
+    
+
+
+
+#WAP to find the new list with cube of the odd position elements and square of the even position elements
+# using while loopo
+#while loop method
+"""my_list = [1,2,3,4,5,6,7,8]
+new_list = []
+i = 0
+while i < len(my_list):
+    if i % 2 == 0:
+        new_list.append(my_list[i] ** 2)
+    else:
+        new_list.append(my_list[i] ** 3)
+    
+    i += 1
+print(new_list)"""
+
+
+#for loop method
+"""my_list = [1,2,3,4,5]
+new_list = []
+j = 1
+for i in my_list:
+    if j % 2 == 0:
+        new_list.append( i ** 2 )
+    else:
+        new_list.append(i ** 3)
+    j += 1
+print(new_list)"""
+
+#next method using enumerate method
+"""my_list = [1,2,3,4,5,5]
+new_list = []
+for index , value in enumerate(my_list): #enumerate() is a built-in Python function that gives both the index and the value of each element in a list when looping.
+    if index % 2 == 0:
+        new_list.append(value ** 2)
+    else:
+        new_list.append(value ** 3)
+print(new_list)"""
+
+#next method
+"""my_list = [2,3,4,2,2]
+new_list = []
+for i in range(len(my_list)):
+    if (i + 1) % 2 == 0:
+        new_list.append(my_list[i] ** 2)
+    else:
+        new_list.append(my_list[i] ** 3)
+print(new_list)"""
+
+
+
+
+#indexing related task cant be done with map , and lambda
+# so we do it by num only not index
+"""def find_something(num):
+  my_list = [1,2,3,4,5]
+  if my_list.index(num) % 2 == 0:
+    return num**3
+  else:
+    return num**2
+print(list(map(find_something, [1,2,3,4,5])))
+
+
+print(tuple(zip(('Ram' ,'Krishna'), ("Sita",'Radha'))))"""
+
+#reduce
+"""from functools import reduce
+def sum(a,b):
+    print(a,b)
+    return a + b
+print((reduce(sum,[1,2,3,4,5])))"""
+
+
+"""def addition(a,b):
+    print(a,b)
+    sum = a + b
+    return sum
+print(reduce(addition, [1,2,3,4,5],4))"""
+
+
+
+"""print(reduce(lambda x , y : x + y, [1,2,3,4,5], 4))"""
+
+
+
+#Wap making highest_even funciton that takes an argument li and return the maximum highesteven num of the list
+def highest_function(even_list):
+    # even_list = [12,13,14,15,16,17,18,19,20]
+    i = 0
+    maximum = even_list[i]
+    while i < len(even_list):
+        if even_list[i] % 2 == 0:
+            if even_list[i] > maximum:
+                maximum = even_list[i]
+        i += 1
+    print(maximum)
+
+highest_function([-4,-3,-5,-6,-7,-2])
+highest_function([1,2,3,4,12,14,1,51,16,17,18])
+
+
+
+#this is the wrong code i am doing for - elements in the list 
+"""def highest_even():
+    my_list = [1,2,3,4,5,6,7,8,9,9,10]
+    maximum = i
+    for i in my_list:
+        if i % 2 == 0:
+            if i > maximum:
+                maximum = i
+    print(maximum)
+highest_even()"""
+
+# this is the correct ocde for - elements in for loop
+my_list = [-1,-2,-3,-4,-5,-6,-7]
+for index , value in enumerate(my_list):
+    if value % 2 == 0:
+        maximum = value
+for i in my_list:
+    if i % 2 == 0:
+        if i > maximum:
+            maximum = i 
+print(maximum)
+
+
+#max of the list using 
+print(max(list(filter(lambda x : x % 2 == 0 , [-1,-2,-3,-4,-5]))))
+
+
+
+# *args vs **kwargs                  #* parameters holds any number of arguments
+"""def sum_no(*num):
+    return sum(num)
+print(sum_no(1,2,3,4,5))"""
+
+"""def super_func(*num):
+  # print(num)
+  # print(*num)
+  return sum(num)
+print(super_func(1,2,3,4,5))"""
+
+
+#scope(what varibles do a function have access to?)
+# priority : local>parent local>global>built in function
+"""a = 1                                                      # priority : local>parent local>global>built in function
+def confusion():
+  a = 5                        #local variable
+  return a
+print(confusion())
+print(a)"""
+
+"""a = 1
+def parent():
+  a = 10                      #parent local
+  def confusion():
+    return a
+  return confusion()
+print(parent())
+print(a)"""
+
+
+"""a = 1                        #global
+def parent():
+  def confusion():
+    return a
+  return confusion()
+print(parent())
+print(a)
+"""
+
+"""def parent():
+  def confusion():
+    return sum
+  return confusion()  
+print(parent())
+#  <built-in function sum> this is the output"""
+
+
+"""total = 0
+def count():
+  total += 1                  #total = total + item
+  return total
+print(count())                    #1
+print(count())   """                 #1
+
+
+total = 0
+def count(total):
+  total += 1                  #total = total + item
+  return total
+print(count(count(total)))                    #2
+print(count(total))                           #1
+
+
+
+
+#global keyword
+total = 0
+def count():
+  global total
+  total += 1               #total = total + item
+  return total
+print(count())                    
+print(count())
+print(count())
+#output is 1
+#2
+#3
