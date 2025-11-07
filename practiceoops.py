@@ -98,7 +98,7 @@ acc1.credit()
 acc1.print_balance()"""
 
 #next method
-class Account:
+"""class Account:
     def __init__(self ,acc_no , bal):
         self.account_no = acc_no
         self.balance = bal
@@ -117,7 +117,60 @@ class Account:
 acc1 = Account(12345,10000)
 acc1.debit(2000)
 acc1.credit(40000)
-acc1.get_balance()
+acc1.get_balance()"""
 
+
+#practice questions
+#1 Define a circle class to create a circle with radius r using the constructor.
+#Define an Area() method of the class which calculates the area of the cirlcle.
+#Define a perimeter() method of the class which allows you to calculate the perimeter of the class
+"""class Circle:
+    def __init__(self,radius):
+        self.radius = radius
+    def Area(self):
+        return (22/7) * self.radius **2 # pie rsquare
+    def Perimeter(self):
+        return (22/7) * 3.14 * self.radius
+c1 = Circle(7)
+print(c1.Area())
+print(c1.Perimeter())
+"""
+
+#2Define a Employee class with attribute role,department and salary.This class also has a showDetails() method 
+#Create an Engineer class that inherits properties from Employee and has additional attributes:name & age
+class Employee:
+    def __init__(self,role,department,salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
+    def showDetails(self):
+        print(f"This Employee role is {self.role} in the {self.department} department and has salary equals to {self.salary}.")
+emp1 = Employee("IT officer","IT","1,00000")
+emp1.showDetails()
+
+class Engineer(Employee):
+    def __init__(self,name , age):
+        super().__init__("Engineer" , "IT" , 1000000)
+        self.name = name
+        self.age = age
+eng1 = Engineer("Apekshya" ,22)
+print(eng1.role)
+eng1.showDetails()
+
+#Create a class called Order which stores item and its price.
+#use a dunder function __gt__() to convey that:
+#         order1>order2 if the price of order1 > price of order2
+class Order:
+    def __init__(self,item,price):
+        self.item = item
+        self.price = price
+    
+    
+
+    def __gt__(self,order2):
+       return self.price > order2.price
+order1 = Order("biscuit", 200)
+order2 = Order("biscuit", 230)
+print(order1 > order2)
 
 
